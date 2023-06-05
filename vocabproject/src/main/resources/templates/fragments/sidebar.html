@@ -1,0 +1,104 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div th:fragment="sidebar">
+    <!-- Main Sidebar Container -->
+    <div class="left-side-menu">
+
+        <div class="slimscroll-menu">
+
+            <!-- User box -->
+            <div class="user-box text-center">
+                <img th:src="@{resources/images/users/user-10.jpg}" alt="user-img" title="Mat Helme"
+                     class="rounded-circle img-thumbnail avatar-md">
+                <div class="dropdown">
+                    <a href="#" class="user-name dropdown-toggle h5 mt-2 mb-1 d-block" data-toggle="dropdown"
+                       aria-expanded="false">Admin</a>
+                    <div class="dropdown-menu user-pro-dropdown">
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="fe-user mr-1"></i>
+                            <span>My Account</span>
+                        </a>
+
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="fe-settings mr-1"></i>
+                            <span>Settings</span>
+                        </a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <i class="fe-log-out mr-1"></i>
+                            <span>Logout</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--- Sidemenu -->
+            <div id="sidebar-menu">
+
+                <ul class="metismenu" id="side-menu">
+
+                    <li class="menu-title">Dashboard</li>
+
+                    <li>
+                        <a href="/manager/home">
+                            <i class="mdi mdi-view-dashboard" ></i>
+                            <span th:text="#{label.home}"></span>
+                        </a>
+                    </li>
+
+                    <li class="menu-title" th:text="#{label.manager}"></li>
+
+                    <li>
+                        <a href="/manager/accounts">
+                            <i class="mdi mdi-forum"></i>
+                            <span th:text="#{label.managerAccount}"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="/manager/accounts/form" th:text="#{label.newAccount}"></a></li>
+                            <li><a href="/manager/accounts" th:text="#{label.listAccount}"></a></li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="/manager/subjects">
+                            <i class="mdi mdi-forum" ></i>
+                            <span th:text="#{label.managerSubject}"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="/manager/subjects/form" th:text="#{label.newSubject}"></a></li>
+                            <li><a href="/manager/subjects" th:text="#{label.listSubject}"></a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="/manager/vocabulary">
+                            <i class="mdi mdi-forum" ></i>
+                            <span th:text="#{label.managerVocabulary}"></span>
+                        </a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="/manager/vocabulary/form" th:text="#{label.newVocabulary}"></a></li>
+                            <li><a href="/manager/vocabulary" th:text="#{label.listVocabulary}"></a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+            <!-- End Sidebar -->
+
+            <div class="clearfix"></div>
+
+        </div>
+        <!-- Sidebar -left -->
+
+    </div>
+</div>
+</body>
+
+</html>
